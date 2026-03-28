@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+
+<title>freenet AG – Portfolio-Übersicht</title>
+<meta name="description" content="Interaktive Übersicht über das Portfolio der freenet AG mit Tochtergesellschaften, Dienstleistungen und Umsatzanteilen.">
+
+<!-- PWA Meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00B295" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="fn Portfolio">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+
+<!-- iOS Icons -->
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="icons/icon-167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+
+<!-- iOS Splash Screens (iPhone Pro Max / iPhone 17) -->
+<link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)" href="icons/icon-512.png">
+<link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)" href="icons/icon-512.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-label="freenet Logo">
+        <rect width="32" height="32" rx="6" fill="var(--color-primary)" class="logo-bg"/>
+        <path d="M8 10h16M8 16h12M8 22h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span>freenet AG</span>
+    </a>
+    <div class="nav-links">
+      <a href="#konzern">Konzern</a>
+      <a href="#segmente">Segmente</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#kennzahlen">Kennzahlen</a>
+    </div>
+    <div class="nav-actions">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <button data-theme-toggle aria-label="Theme wechseln" class="theme-toggle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#konzern">Konzern</a>
+    <a href="#segmente">Segmente</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#kennzahlen">Kennzahlen</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Deutschlands größter netzunabhängiger Telekommunikationsanbieter</div>
+    <h1 class="hero-title">freenet AG<br><span class="hero-accent">Portfolio-Übersicht</span></h1>
+    <p class="hero-sub">Interaktive Darstellung der Konzernstruktur, Tochtergesellschaften, Dienstleistungen und Umsatzanteile – Geschäftsjahr 2024</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="2478">0</span>
+        <span class="hero-stat-label">Mio. € Umsatz</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="10149">0</span>
+        <span class="hero-stat-label">Tsd. Abonnenten</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="3167">0</span>
+        <span class="hero-stat-label">Mitarbeiter</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="522">0</span>
+        <span class="hero-stat-label">Mio. € EBITDA</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- Konzernstruktur -->
+<section class="section" id="konzern">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Unternehmensstruktur</span>
+      <h2>Konzernstruktur</h2>
+      <p>Die freenet AG mit Sitz in Büdelsdorf ist der größte netzunabhängige Telekommunikationsanbieter in Deutschland. Der Konzern gliedert sich in drei operative Segmente.</p>
+    </div>
+
+    <div class="org-chart">
+      <div class="org-root">
+        <div class="org-card org-parent">
+          <div class="org-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+          </div>
+          <h3>freenet AG</h3>
+          <p>Büdelsdorf · ISIN DE000A0Z2ZZ5</p>
+          <span class="org-badge">Muttergesellschaft</span>
+        </div>
+      </div>
+      <div class="org-line"></div>
+      <div class="org-children">
+        <div class="org-card" data-entity="dls">
+          <div class="org-card-icon seg-mobile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h4>freenet DLS GmbH</h4>
+          <p>Digital Lifestyle Services</p>
+          <span class="org-badge badge-green">100 %</span>
+        </div>
+        <div class="org-card" data-entity="cityline">
+          <div class="org-card-icon seg-tv">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <h4>freenet Cityline GmbH</h4>
+          <p>Telekommunikations-Services</p>
+          <span class="org-badge badge-teal">100 %</span>
+        </div>
+        <div class="org-card org-card-inactive" data-entity="gravis">
+          <div class="org-card-icon seg-dls">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h4>GRAVIS</h4>
+          <p>Apple-Fachhandel</p>
+          <span class="org-badge badge-red">Eingestellt 06/2024</span>
+        </div>
+        <div class="org-card org-card-new" data-entity="mobilezone">
+          <div class="org-card-icon seg-mobile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v-2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h4>mobilezone Deutschland</h4>
+          <p>Online-Mobilfunkvertrieb</p>
+          <span class="org-badge badge-purple">Erworben Q4/2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Segmente -->
+<section class="section section-alt" id="segmente">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Geschäftsbereiche</span>
+      <h2>Drei Segmente</h2>
+      <p>freenet gliedert seine Geschäftstätigkeit in die Segmente Mobilfunk, TV und Medien sowie Sonstige/Holding.</p>
+    </div>
+
+    <div class="segment-tabs">
+      <button class="seg-tab active" data-seg="mobile">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        Mobilfunk
+      </button>
+      <button class="seg-tab" data-seg="tv">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        TV & Medien
+      </button>
+      <button class="seg-tab" data-seg="other">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Sonstige / Holding
+      </button>
+    </div>
+
+    <!-- Mobilfunk Segment -->
+    <div class="seg-panel active" id="seg-mobile">
+      <div class="seg-grid">
+        <div class="seg-info">
+          <div class="seg-kpi-row">
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">2.057</span>
+              <span class="seg-kpi-label">Mio. € Umsatz</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">83%</span>
+              <span class="seg-kpi-label">Umsatzanteil</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">427</span>
+              <span class="seg-kpi-label">Mio. € EBITDA</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">7.713</span>
+              <span class="seg-kpi-label">Tsd. Postpaid-Kunden</span>
+            </div>
+          </div>
+          <h3>Mobilfunk – Kerngeschäft</h3>
+          <p>Als größter netzunabhängiger Service Provider bietet freenet Tarife von allen drei deutschen Netzbetreibern (Deutsche Telekom, Vodafone, Telefónica) an. Das Geschäft umfasst Postpaid- und Prepaid-Verträge unter Premium- und Discountmarken.</p>
+          <div class="seg-services">
+            <h4>Dienstleistungen & Produkte</h4>
+            <ul>
+              <li><strong>Mobilfunktarife:</strong> Postpaid, Prepaid, No-Frills, SIM-only und Bundleverträge in allen deutschen Netzen</li>
+              <li><strong>Marken:</strong> freenet, klarmobil, mobilcom-debitel (historisch)</li>
+              <li><strong>Hardware-Vertrieb:</strong> Smartphones, Tablets, Wearables von Apple, Samsung, Google u.a.</li>
+              <li><strong>Shop-Netzwerk:</strong> ~520 Shops deutschlandweit (eigene + Franchise)</li>
+              <li><strong>Online-Vertrieb:</strong> Omnichannel über freenet.de und Partner</li>
+              <li><strong>MediaMarktSaturn-Partnerschaft:</strong> Exklusiver TK-Vertrieb in 400+ Saturn-Filialen</li>
+            </ul>
+          </div>
+        </div>
+        <div class="seg-chart-area">
+          <div class="seg-chart-title">Postpaid ARPU (€/Monat)</div>
+          <div class="chart-bar-container" id="arpu-chart">
+            <div class="chart-bar-item"><span class="chart-bar-label">Q1 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-mobile" style="width:88.5%"></div></div><span class="chart-bar-value">17,7 €</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">Q2 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-mobile" style="width:89.5%"></div></div><span class="chart-bar-value">17,9 €</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">Q3 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-mobile" style="width:90.5%"></div></div><span class="chart-bar-value">18,1 €</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">Q4 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-mobile" style="width:88.5%"></div></div><span class="chart-bar-value">17,7 €</span></div>
+          </div>
+          <div class="seg-chart-title" style="margin-top:var(--space-8)">Marktanteile Postpaid Deutschland</div>
+          <div class="donut-container" id="market-donut">
+            <canvas id="marketCanvas" width="240" height="240"></canvas>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#00506e"></span>Telekom 30,6 %</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#e60000"></span>Telefónica 27,4 %</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#4a90d9"></span>Vodafone 24,1 %</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#00B295"></span>freenet 8,0 %</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#555"></span>1&1 8,5 %</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#999"></span>Sonstige 1,4 %</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TV und Medien Segment -->
+    <div class="seg-panel" id="seg-tv">
+      <div class="seg-grid">
+        <div class="seg-info">
+          <div class="seg-kpi-row">
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">400</span>
+              <span class="seg-kpi-label">Mio. € Umsatz</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">16%</span>
+              <span class="seg-kpi-label">Umsatzanteil</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">103</span>
+              <span class="seg-kpi-label">Mio. € EBITDA</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">2.437</span>
+              <span class="seg-kpi-label">Tsd. TV-Kunden</span>
+            </div>
+          </div>
+          <h3>TV und Medien – Wachstumsmotor</h3>
+          <p>Das am stärksten wachsende Segment mit waipu.tv als IPTV-Plattform und freenet TV (DVB-T2). waipu.tv ist der Nr. 2 IPTV-Anbieter in Deutschland mit über 1,9 Mio. Abonnenten.</p>
+          <div class="seg-services">
+            <h4>Dienstleistungen & Produkte</h4>
+            <ul>
+              <li><strong>waipu.tv (EXARING):</strong> IPTV-Plattform, vollintegriert auf eigenem deutschlandweiten Glasfasernetz, 23 Mio. Haushalte erreichbar</li>
+              <li><strong>freenet TV (Media Broadcast):</strong> DVB-T2-HD Antennenfernsehen, alleiniger kommerzieller Anbieter in Deutschland</li>
+              <li><strong>DAB+ Digitalradio:</strong> Bundesweites digitales Radio über Media Broadcast</li>
+              <li><strong>Dynamic Ad Substitution:</strong> Technologie für zielgruppenspezifische TV-Werbung</li>
+              <li><strong>Content-Aggregation:</strong> Integration von BILD TV, ADAC TV und weiteren Inhalten</li>
+            </ul>
+          </div>
+        </div>
+        <div class="seg-chart-area">
+          <div class="seg-chart-title">TV-Abonnenten Entwicklung (Tsd.)</div>
+          <div class="chart-bar-container">
+            <div class="chart-bar-item"><span class="chart-bar-label">waipu Q1</span><div class="chart-bar-track"><div class="chart-bar-fill bar-tv" style="width:56%"></div></div><span class="chart-bar-value">1.508</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">waipu Q2</span><div class="chart-bar-track"><div class="chart-bar-fill bar-tv" style="width:66%"></div></div><span class="chart-bar-value">1.699</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">waipu Q3</span><div class="chart-bar-track"><div class="chart-bar-fill bar-tv" style="width:75%"></div></div><span class="chart-bar-value">1.830</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">waipu Q4</span><div class="chart-bar-track"><div class="chart-bar-fill bar-tv" style="width:80%"></div></div><span class="chart-bar-value">1.941</span></div>
+          </div>
+          <div class="seg-chart-title" style="margin-top:var(--space-6)">freenet TV Kunden (RGU, Tsd.)</div>
+          <div class="chart-bar-container">
+            <div class="chart-bar-item"><span class="chart-bar-label">Q1 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-decline" style="width:95%"></div></div><span class="chart-bar-value">562</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">Q2 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-decline" style="width:92%"></div></div><span class="chart-bar-value">544</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">Q3 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-decline" style="width:87%"></div></div><span class="chart-bar-value">514</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">Q4 2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-decline" style="width:84%"></div></div><span class="chart-bar-value">496</span></div>
+          </div>
+          <p class="chart-note">waipu.tv: +571 Tsd. Neukunden in 2024 (+41,7 %) kompensieren den DVB-T2 Rückgang</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sonstige/Holding Segment -->
+    <div class="seg-panel" id="seg-other">
+      <div class="seg-grid">
+        <div class="seg-info">
+          <div class="seg-kpi-row">
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">~21</span>
+              <span class="seg-kpi-label">Mio. € Umsatz</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">~1%</span>
+              <span class="seg-kpi-label">Umsatzanteil</span>
+            </div>
+            <div class="seg-kpi">
+              <span class="seg-kpi-val">172</span>
+              <span class="seg-kpi-label">Mio. € DLS-Umsatz</span>
+            </div>
+          </div>
+          <h3>Sonstige / Holding</h3>
+          <p>Umfasst die Konzernholding-Funktionen, freenet Energy sowie Digital-Lifestyle-Produkte (DLS), die segmentübergreifend vertrieben werden.</p>
+          <div class="seg-services">
+            <h4>Dienstleistungen & Produkte</h4>
+            <ul>
+              <li><strong>freenet Energy:</strong> Strom- und Gastarife für Endkunden (Standort Berlin)</li>
+              <li><strong>Digital Lifestyle (DLS):</strong> Security & Data, Entertainment, Smart Care & Sports, Smart Home – 172 Mio. € Umsatz</li>
+              <li><strong>Holding-Funktionen:</strong> Konzernsteuerung, IT-Infrastruktur, Rechenzentrum (Oberkrämer), Treasury, Controlling</li>
+              <li><strong>Beteiligung:</strong> 9,1 % an CECONOMY AG (MediaMarkt/Saturn)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="seg-chart-area">
+          <div class="seg-chart-title">Umsatzverteilung Konzern 2024</div>
+          <div class="revenue-split">
+            <div class="rev-bar">
+              <div class="rev-segment rev-mobile" style="width:83%">
+                <span class="rev-label">Mobilfunk</span>
+                <span class="rev-pct">83 %</span>
+              </div>
+              <div class="rev-segment rev-tv" style="width:16%">
+                <span class="rev-label">TV</span>
+                <span class="rev-pct">16 %</span>
+              </div>
+              <div class="rev-segment rev-other" style="width:1%"></div>
+            </div>
+            <div class="rev-details">
+              <div class="rev-detail-item">
+                <span class="rev-dot" style="background:var(--fn-green)"></span>
+                <span>Mobilfunk: 2.057 Mio. €</span>
+              </div>
+              <div class="rev-detail-item">
+                <span class="rev-dot" style="background:var(--fn-teal-dark)"></span>
+                <span>TV & Medien: 400 Mio. €</span>
+              </div>
+              <div class="rev-detail-item">
+                <span class="rev-dot" style="background:var(--fn-gray)"></span>
+                <span>Sonstige/Holding: ~21 Mio. €</span>
+              </div>
+            </div>
+          </div>
+          <div class="seg-chart-title" style="margin-top:var(--space-8)">DLS-Umsatz Entwicklung (Mio. €)</div>
+          <div class="chart-bar-container">
+            <div class="chart-bar-item"><span class="chart-bar-label">2022</span><div class="chart-bar-track"><div class="chart-bar-fill bar-dls" style="width:80%"></div></div><span class="chart-bar-value">161</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">2023</span><div class="chart-bar-track"><div class="chart-bar-fill bar-dls" style="width:86%"></div></div><span class="chart-bar-value">172</span></div>
+            <div class="chart-bar-item"><span class="chart-bar-label">2024</span><div class="chart-bar-track"><div class="chart-bar-fill bar-dls" style="width:86%"></div></div><span class="chart-bar-value">172</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Detail -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Tochtergesellschaften</span>
+      <h2>Portfolio im Detail</h2>
+      <p>Die vier ausgewählten Tochtergesellschaften und deren Rolle im freenet-Konzern.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- freenet DLS -->
+      <article class="port-card" id="card-dls">
+        <div class="port-card-header">
+          <div class="port-icon seg-mobile">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <div>
+            <h3>freenet DLS GmbH</h3>
+            <span class="port-location">Büdelsdorf · 100 % Tochter</span>
+          </div>
+          <span class="port-status active">Aktiv</span>
+        </div>
+        <div class="port-card-body">
+          <p class="port-desc">Die freenet DLS GmbH (Digital Lifestyle Services) ist die zentrale operative Tochtergesellschaft für das Kerngeschäft. Sie entwickelt und vertreibt IT- und Kommunikationsdienstleistungen, betreibt den Shopbetrieb und die Logistik sowie klarmobil als Discount-Marke.</p>
+          <div class="port-details">
+            <div class="port-detail-section">
+              <h4>Geschäftszweck</h4>
+              <p>Entwicklung und Bereitstellung von Dienstleistungen in den Bereichen Informationstechnologie und Kommunikation, Vertrieb aller Artikel und Produkte in diesen Bereichen.</p>
+            </div>
+            <div class="port-detail-section">
+              <h4>Dienstleistungen</h4>
+              <ul>
+                <li>Betrieb der freenet Shops und Logistik</li>
+                <li>Mobilfunktarife unter den Marken freenet und klarmobil</li>
+                <li>eCommerce-Plattformen und Online-Vertrieb</li>
+                <li>Digital Lifestyle Produkte (Security, Cloud, Versicherungen, Smart Home)</li>
+                <li>Vertriebspartnerschaft mit MediaMarktSaturn (exklusiv)</li>
+                <li>„Assisted Personalized Shopping" (APS) – Omnichannel-Konzept</li>
+              </ul>
+            </div>
+            <div class="port-detail-section">
+              <h4>Strategische Bedeutung</h4>
+              <div class="port-tags">
+                <span class="port-tag">Kerngeschäft</span>
+                <span class="port-tag">Shop-Netzwerk</span>
+                <span class="port-tag">Omnichannel</span>
+                <span class="port-tag">DLS 172 Mio. €</span>
+              </div>
+            </div>
+          </div>
+          <button class="port-toggle" aria-expanded="false">Details anzeigen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- freenet Cityline -->
+      <article class="port-card" id="card-cityline">
+        <div class="port-card-header">
+          <div class="port-icon seg-tv">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <h3>freenet Cityline GmbH</h3>
+            <span class="port-location">Hamburg · 100 % Tochter</span>
+          </div>
+          <span class="port-status active">Aktiv</span>
+        </div>
+        <div class="port-card-body">
+          <p class="port-desc">Spezialisierte Telekommunikationsgesellschaft mit Sitz in Hamburg (Deelbögenkamp 4). Verantwortlich für TK-Dienstleistungen, Vermietung und Betrieb von Vermittlungsstellen.</p>
+          <div class="port-details">
+            <div class="port-detail-section">
+              <h4>Geschäftszweck</h4>
+              <p>Bereitstellung von Dienstleistungen sowie Geräten für die Telekommunikation, Vermietung und Leasing von TK-Geräten, Errichtung und Betrieb von Vermittlungsstellen und Dienstleistungszentren.</p>
+            </div>
+            <div class="port-detail-section">
+              <h4>Dienstleistungen</h4>
+              <ul>
+                <li>Betrieb und Bereitstellung von Telekommunikationsinfrastruktur</li>
+                <li>Vermittlungsstellen und Dienstleistungszentren</li>
+                <li>Vermietung und Leasing von TK-Geräten</li>
+                <li>Computer- und Datenverarbeitungs-Services</li>
+                <li>Handel mit Telekommunikationsgeräten</li>
+              </ul>
+            </div>
+            <div class="port-detail-section">
+              <h4>Strategische Bedeutung</h4>
+              <div class="port-tags">
+                <span class="port-tag">TK-Infrastruktur</span>
+                <span class="port-tag">B2B/B2C</span>
+                <span class="port-tag">HRB 147718</span>
+              </div>
+            </div>
+          </div>
+          <button class="port-toggle" aria-expanded="false">Details anzeigen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- GRAVIS -->
+      <article class="port-card port-card-discontinued" id="card-gravis">
+        <div class="port-card-header">
+          <div class="port-icon seg-dls">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div>
+            <h3>GRAVIS</h3>
+            <span class="port-location">Berlin · 100 % Tochter (seit 2013)</span>
+          </div>
+          <span class="port-status discontinued">Eingestellt</span>
+        </div>
+        <div class="port-card-body">
+          <p class="port-desc">Ehemals einer der größten Apple-Fachhändler Deutschlands mit 38-jähriger Geschichte. Die Geschäftstätigkeit wurde per Ende Juni 2024 vollständig eingestellt und wird als aufgegebener Geschäftsbereich bilanziert.</p>
+          <div class="port-details">
+            <div class="port-detail-section">
+              <h4>Historischer Überblick</h4>
+              <div class="timeline">
+                <div class="timeline-item"><span class="timeline-year">~1986</span><span>Gründung als Apple-Fachhändler</span></div>
+                <div class="timeline-item"><span class="timeline-year">2013</span><span>Übernahme durch freenet (100 %) – Etablierung DLS</span></div>
+                <div class="timeline-item"><span class="timeline-year">03/2024</span><span>Beschluss zur Abwicklung wegen restriktiver Apple-Konditionen</span></div>
+                <div class="timeline-item"><span class="timeline-year">15.06.24</span><span>Einstellung Warenverkauf (37 Stores + Online)</span></div>
+                <div class="timeline-item"><span class="timeline-year">30.06.24</span><span>Vollständige Geschäftsschließung</span></div>
+              </div>
+            </div>
+            <div class="port-detail-section">
+              <h4>Einstellungsgründe</h4>
+              <ul>
+                <li>Restriktives Konditionsmodell seitens Apple – zu geringe Margen</li>
+                <li>Monobrand-Shop-Konzept nicht nachhaltig wirtschaftlich</li>
+                <li>Rückläufige Relevanz des Telefonvertrags-Crosssellings</li>
+                <li>Bilanzierung als aufgegebener Geschäftsbereich (IFRS 5)</li>
+              </ul>
+            </div>
+            <div class="port-detail-section">
+              <h4>Status</h4>
+              <div class="port-tags">
+                <span class="port-tag tag-red">Aufgegebener Geschäftsbereich</span>
+                <span class="port-tag tag-red">37 Stores geschlossen</span>
+                <span class="port-tag tag-red">IFRS 5</span>
+              </div>
+            </div>
+          </div>
+          <button class="port-toggle" aria-expanded="false">Details anzeigen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- mobilezone Deutschland -->
+      <article class="port-card port-card-new" id="card-mobilezone">
+        <div class="port-card-header">
+          <div class="port-icon seg-mobile">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v-2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div>
+            <h3>mobilezone Deutschland</h3>
+            <span class="port-location">Köln · Erworben Q4/2025</span>
+          </div>
+          <span class="port-status new-acq">Neu erworben</span>
+        </div>
+        <div class="port-card-body">
+          <p class="port-desc">Einer der führenden unabhängigen Telekommunikationsanbieter in Deutschland. Erworben für rund 230 Mio. € von der Schweizer mobilezone holding ag. Die Übernahme wurde im November 2025 vom Bundeskartellamt genehmigt.</p>
+          <div class="port-details">
+            <div class="port-detail-section">
+              <h4>Kennzahlen (2024)</h4>
+              <div class="mz-kpis">
+                <div class="mz-kpi"><span class="mz-val">~780</span><span class="mz-label">Mio. € Umsatz</span></div>
+                <div class="mz-kpi"><span class="mz-val">30</span><span class="mz-label">Mio. € EBITDA</span></div>
+                <div class="mz-kpi"><span class="mz-val">300</span><span class="mz-label">Mitarbeiter</span></div>
+                <div class="mz-kpi"><span class="mz-val">1 Mio.+</span><span class="mz-label">Verträge/Jahr</span></div>
+              </div>
+            </div>
+            <div class="port-detail-section">
+              <h4>Marken & Dienstleistungen</h4>
+              <ul>
+                <li><strong>Sparhandy:</strong> Führende Online-Plattform für Mobilfunkverträge</li>
+                <li><strong>DeinHandy:</strong> Online-Mobilfunk-Vergleichsportal</li>
+                <li><strong>Handystar:</strong> Discount-Mobilfunkvertrieb</li>
+                <li><strong>HIGH:</strong> Eigene Mobilfunkmarke</li>
+                <li><strong>simyo:</strong> Mobilfunkmarke (MVNO)</li>
+                <li><strong>mobilezone exchange:</strong> Gebrauchtgeräte-Handel und Refurbishment</li>
+                <li><strong>B2B-Geschäft:</strong> Geschäftskunden-Vertrieb</li>
+              </ul>
+            </div>
+            <div class="port-detail-section">
+              <h4>Strategische Bedeutung</h4>
+              <div class="port-tags">
+                <span class="port-tag tag-green">230 Mio. € Kaufpreis</span>
+                <span class="port-tag tag-green">Online-Vertrieb</span>
+                <span class="port-tag tag-green">BKartA genehmigt 11/2025</span>
+                <span class="port-tag tag-green">Standorte: Köln, Bochum, Münster</span>
+              </div>
+            </div>
+          </div>
+          <button class="port-toggle" aria-expanded="false">Details anzeigen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Kennzahlen -->
+<section class="section section-alt" id="kennzahlen">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Geschäftsjahr 2024</span>
+      <h2>Konzernkennzahlen</h2>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <span class="kpi-value">2.478 Mio. €</span>
+        <span class="kpi-label">Konzernumsatz</span>
+        <span class="kpi-change positive">+3,9 % ggü. Vj.</span>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <span class="kpi-value">521,5 Mio. €</span>
+        <span class="kpi-label">EBITDA (Rekord)</span>
+        <span class="kpi-change positive">+3,5 % ggü. Vj.</span>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v-2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <span class="kpi-value">10.149 Tsd.</span>
+        <span class="kpi-label">Postpaid-Abonnenten</span>
+        <span class="kpi-change positive">+166 Tsd.</span>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <span class="kpi-value">2.437 Tsd.</span>
+        <span class="kpi-label">TV-Kunden (gesamt)</span>
+        <span class="kpi-change positive">+458 Tsd.</span>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <span class="kpi-value">1,77 €</span>
+        <span class="kpi-label">Dividende je Aktie</span>
+        <span class="kpi-change positive">+4,7 %</span>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <span class="kpi-value">250,2 Mio. €</span>
+        <span class="kpi-label">Free Cashflow</span>
+        <span class="kpi-change positive">+16,8 %</span>
+      </div>
+    </div>
+
+    <div class="kpi-table-wrap">
+      <h3>Segmentumsätze im Vergleich (Mio. €)</h3>
+      <table class="kpi-table">
+        <thead>
+          <tr>
+            <th>Segment</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>Veränderung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="seg-dot" style="background:var(--fn-green)"></span>Mobilfunk</td>
+            <td>1.982</td>
+            <td>2.057</td>
+            <td class="trend-up">+3,8 %</td>
+          </tr>
+          <tr>
+            <td><span class="seg-dot" style="background:var(--fn-teal-dark)"></span>TV & Medien</td>
+            <td>356</td>
+            <td>400</td>
+            <td class="trend-up">+12,4 %</td>
+          </tr>
+          <tr>
+            <td><span class="seg-dot" style="background:var(--fn-gray)"></span>Sonstige / Holding</td>
+            <td>47</td>
+            <td>21</td>
+            <td class="trend-neutral">-55,3 %</td>
+          </tr>
+          <tr class="table-total">
+            <td><strong>Konzernumsatz</strong></td>
+            <td><strong>2.385</strong></td>
+            <td><strong>2.478</strong></td>
+            <td class="trend-up"><strong>+3,9 %</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Quellen -->
+<section class="section" id="quellen">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Quellennachweise</span>
+      <h2>Datengrundlage</h2>
+    </div>
+    <ul class="sources-list">
+      <li><a href="https://www.freenet.ag/investor-relations/berichte/index.html">freenet AG Geschäftsbericht 2024</a></li>
+      <li><a href="https://www.freenet.ag/presse/index.html">freenet AG Pressemitteilungen 2024/2025</a></li>
+      <li><a href="https://www.bundesnetzagentur.de">Bundesnetzagentur – Marktdaten Telekommunikation</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p>freenet AG Portfolio-Übersicht · Stand März 2026</p>
+      <p>Alle Angaben ohne Gewähr · Erstellt zu Informationszwecken</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
